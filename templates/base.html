@@ -17,13 +17,15 @@ crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-  <a class="navbar-brand" href="{% url 'home' %}">Django Store App</a>  | <a class="navbar-brand" href="{% url 'books' %}">Books</a> | <a class="navbar-brand" href="{% url 'journals' %}">Journals</a> 
+  <a class="navbar-brand" href="{% url 'home' %}">Django Store App</a>  | <a class="navbar-brand" href="{% url 'books' %}">Books</a> | <a class="navbar-brand" href="{% url 'journals' %}">Journals</a> | <a class="navbar-brand" href="{% url 'list_articles' %}">Articles</a>
     {% if user.is_authenticated %}
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="navbar-brand" href="{% url 'new_page' %}"> <!--Здесь добавим ссылку на создание поста-->
-            + New
-          </a>
+            | <a class="navbar-brand" href="{% url 'new_page' %}"> <!--Здесь добавим ссылку на создание поста-->
+            + New page
+          </a> |
+          <a class="navbar-brand" href="{% url 'new_article' %}"> <!--Здесь добавим ссылку на создание поста-->
+            + New article</a>
         </li>
       </ul>
     {% endif %}

@@ -23,4 +23,5 @@ urlpatterns = [
     path("", include("pages.urls")),
     path("users/", include("django.contrib.auth.urls")), # Процесс передачи управления стандартному приложению
     path("users/", include("users.urls")),
+    path("articles/", include("articles.urls")),
 ]
