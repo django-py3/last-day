@@ -13,9 +13,8 @@ class RegularUserAdmin(UserAdmin):
     add_form = RegularUserCreationForm
     form = RegularUserChangeForm
     model = RegularUser
-    list_display = ["email", "age", "username", "is_staff"]
+    list_display = ["username", "age", "email", "is_staff"]
 
 
 # Регистрируем интерфейс в панель
 admin.site.register(RegularUser, RegularUserAdmin)
-

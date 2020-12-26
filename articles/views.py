@@ -1,18 +1,23 @@
-from django.views.generic import ListView , DetailView, UpdateView, DeleteView, CreateView
+from django.views.generic import ListView , DetailView, UpdateView, DeleteView, CreateView, TemplateView
 from django.urls import reverse_lazy 
 from .models import Article
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import PermissionDenied
 
-class ArticleListView(ListView):
+class ArticlesMainPageView(TemplateView):
+    template_name = "articles.html"
+
+class ArticleListView(LoginRequiredMixin, ListView):
     model = Article
     template_name = "list_articles.html"
     context_object_name = "list_articles"
+    login_url = 'login'
 
 class ArticleDetailView(DetailView):
     model = Article 
     template_name = "detail_article.html"
     context_object_name = "article"
+    login_url = 'login'
 
 class ArticleUpdateView(LoginRequiredMixin, UpdateView):
     model = Article 

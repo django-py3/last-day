@@ -2,13 +2,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p>
+    <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_desc' %}">books_reversed_desc</a>
+    |
+    <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_asc' %}">books_reversed_asc</a>
+</p>
     {% for journal in journals %}
         <div class = "journal-entry">
             <h2>
                 <a href="{% url 'detail_journal' journal.pk %}">{{ journal.title }}</a>
             </h2>
             <p>
-                {{ journal.journalauthor }}<br><b>Рейтинг:</b> {{ journal.journalrejting }}
+                {{ journal.journalauthor }}<br><b>Рейтинг:</b> {{ journal.journalspagecount }}
             </p>
         </div>
     {% endfor %}

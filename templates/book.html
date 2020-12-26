@@ -2,13 +2,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<p>
+    <a class="btn btn-primary btn-lg" href="{% url 'books_reversed_desc' %}">books_reversed_desc</a>
+    |
+    <a class="btn btn-primary btn-lg" href="{% url 'books_reversed_asc' %}">books_reversed_asc</a>
+</p>
     {% for book in books %}
         <div class = "book-entry">
             <h2>
                 <a href="{% url 'detail_book' book.pk %}">{{ book.title }}</a>
                 </h2>
                 <p>                
-                    {{ book.bookauthor }}<br><b>Рейтинг:</b> {{ book.bookrejtin }}
+                    {{ book.bookauthor }}<br><b>Рейтинг:</b> {{ book.bookrejting }}
                 </p>
         </div>
     {% endfor %}
