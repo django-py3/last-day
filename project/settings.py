@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '&$0i7vt=j7#1064tk!42k9fqf=26-rmdi+qibg6p0+c$md3(ml'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["project.abdunazarov.ru"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
