@@ -3,9 +3,9 @@
 
 {% block content %}
 <p>
-    <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_desc' %}">books_reversed_desc</a>
+    <h3>Sort: <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_desc' %}">desc</a>
     |
-    <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_asc' %}">books_reversed_asc</a>
+    <a class="btn btn-primary btn-lg" href="{% url 'journals_reversed_asc' %}">asc</a></h3>
 </p>
     {% for journal in journals %}
         <div class = "journal-entry">
