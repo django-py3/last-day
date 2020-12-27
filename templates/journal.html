@@ -13,7 +13,7 @@
                 <a href="{% url 'detail_journal' journal.pk %}">{{ journal.title }}</a>
             </h2>
             <p>
-                {{ journal.journalauthor }}<br><b>Рейтинг:</b> {{ journal.journalspagecount }}
+                {{ journal.journalauthor }}<br><b>Количество страниц:</b> {{ journal.journalspagecount }}
             </p>
         </div>
     {% endfor %}
